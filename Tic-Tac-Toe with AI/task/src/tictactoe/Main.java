@@ -59,14 +59,178 @@ public class Main {
             //TODO
             print(arr);
             easyAiOVsMediumAiX();
-        }  else if (inputTab[1].equals("medium") && inputTab[2].equals("easy")) {
+        } else if (inputTab[1].equals("medium") && inputTab[2].equals("easy")) {
             //TODO
             print(arr);
             mediumXAiVseasyAiO();
+        } else if (inputTab[1].equals("easy") && inputTab[2].equals("hard")) {
+            //TODO
+            print(arr);
+            easyX_hardO();
+        } else if (inputTab[1].equals("medium") && inputTab[2].equals("hard")) {
+            //TODO
+            print(arr);
+            mediumX_hardO();
+        } else if (inputTab[1].equals("hard") && inputTab[2].equals("hard")) {
+            //TODO
+            print(arr);
+            hardX_hardO();
+        } else if (inputTab[1].equals("hard") && inputTab[2].equals("medium")) {
+            //TODO
+            print(arr);
+            hardX_mediumO();
+        } else if (inputTab[1].equals("hard") && inputTab[2].equals("easy")) {
+            //TODO
+            print(arr);
+            hardX_easyO();
+        } else if (inputTab[1].equals("user") && inputTab[2].equals("hard")) {
+            //TODO
+            print(arr);
+            userX_hardO();
+        } else if (inputTab[1].equals("hard") && inputTab[2].equals("user")) {
+            //TODO
+            print(arr);
+            hardX_userO();
         }
+//TODO AI VS AI
 
-//TODO Apply MINMAX algorithm
+    }
 
+    private static void hardX_userO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"hard\"");
+                randomBotMove();
+            } else {
+                mark = 'O';
+                System.out.print("Enter the coordinates: ");
+                fillTheCell();
+
+            }
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void userX_hardO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+
+                System.out.print("Enter the coordinates: ");
+                fillTheCell();
+
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"hard\"");
+                randomBotMove();
+
+            }
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void hardX_easyO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"hard\"");
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"easy\"");
+            }
+
+            randomBotMove();
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void hardX_mediumO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"hard\"");
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"medium\"");
+            }
+
+            randomBotMove();
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void hardX_hardO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"hard\"");
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"hard\"");
+            }
+
+            randomBotMove();
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void mediumX_hardO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"medium\"");
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"hard\"");
+            }
+
+            randomBotMove();
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
+    }
+
+    private static void easyX_hardO() {
+        do {
+            if (count % 2 == 0) {
+                mark = 'X';
+                System.out.println("Making move level \"easy\"");
+            } else {
+                mark = 'O';
+                System.out.println("Making move level \"hard\"");
+            }
+
+            randomBotMove();
+            count++;
+            checkStatus();
+        } while (!checkStatus());
+        if (count == 10) {
+            System.out.println("Draw");
+        }
     }
 
     private static void mediumXAiVseasyAiO() {
